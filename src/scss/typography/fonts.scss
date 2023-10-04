@@ -1,16 +1,7 @@
-@font-face {
-  font-family: 'Roboto Italic';
-  src: url('../fonts/roboto-italic-webfont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+@import "../variables";
+@import "../utils/mixins";
 
+@each $file, $font-family in $fonts {
+  @include font-face($font-family, $file);
 }
 
-
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url('../fonts/roboto-regular-webfont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-
-}
